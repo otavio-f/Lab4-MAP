@@ -1,5 +1,5 @@
 package sistema;
 
-public interface Funcionario {
+public class Funcionario {
 
 }
