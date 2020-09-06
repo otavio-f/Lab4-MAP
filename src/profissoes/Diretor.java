@@ -4,7 +4,7 @@ public class Diretor implements Profissao {
 
 	@Override
 	public String acao() {
-		return null;
+		return "Dirige o filme";
 	}
 
 }
