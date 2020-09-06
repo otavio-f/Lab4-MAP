@@ -1,0 +1,12 @@
+package main;
+
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("a) Cadastrar todos os envolvidos em um filme informando sua(s) funcão(ões):");
+		
+		System.out.println("b) Informar a filmografia indicando sua função específica:");
+		
+		System.out.println("c) Informar todas as características de um dado filme (nome, diretor, roteirista, elenco, trilha sonora, ano, etc.)");
+	}
+
+}
