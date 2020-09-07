@@ -38,23 +38,24 @@ public class Filme {
 	public void adicionarFuncionario(Profissao funcionario) {
 		funcionarios.add(funcionario);
 	}
-	
+
+	/***
+	 * Infoma todas as características e papeis de um filme
+	 * @param filme
+	 * @return
+	 */
 	public String detalhes() {
-		return null;
+		String output = String.format("Título: %s\n", this.titulo);
+		output += String.format("Data de lançamento: %s\n", this.ano.format(DateTimeFormatter.ofPattern("MM/yyyy")));
+		for(Profissao p: funcionarios)
+			output += p.acao();
+		return output;
 	}
 	
 	public String acaoFuncionario(Funcionario func) {
 		for(Profissao p: funcionarios)
 			if(p.getFuncionario().equals(func))
 				return p.acao();
-		return null;
-	}
-	
-	public Funcionario isDiretor(Funcionario func) {
-		for(Profissao p: funcionarios)
-			if(p.acao().equals("Dirigir o filme"))
-				return p.getFuncionario();
-		
 		return null;
 	}
 	
