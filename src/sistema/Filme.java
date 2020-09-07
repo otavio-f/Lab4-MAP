@@ -48,10 +48,11 @@ public class Filme {
 	}
 	
 	public String acaoFuncionario(Funcionario func) {
+		String acoes = "";
 		for(Profissao p: funcionarios)
 			if(p.getFuncionario().equals(func))
-				return p.acao();
-		return null;
+				acoes += p.acao();
+		return acoes;
 	}
 	
 	public Funcionario isDiretor(Funcionario func) {

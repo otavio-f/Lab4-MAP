@@ -61,7 +61,16 @@ public class Sistema {
 	 * @return todas as participacoes e papeis do funcionario nos filmes
 	 */
 	public String informarFilmografia(Funcionario funcionario) {
-		return null;
+		String filmografia = "";
+		for(Filme f:this.filmes) {
+			if(f.acaoFuncionario(funcionario)!=null) {
+				filmografia = "\n"+ funcionario.toString();
+			}else {
+				filmografia += String.format("Não houve participação de %s\n", funcionario);
+			}
+			filmografia += String.format("Filme: %s\n", f);
+		}		
+		return filmografia;
 	}
 
 	/***
