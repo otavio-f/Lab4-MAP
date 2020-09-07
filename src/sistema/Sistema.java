@@ -30,6 +30,10 @@ public class Sistema {
 	public void addFilme(Filme filme) {
 		this.filmes.add(filme);
 	}
+
+	public void criarFilme(String titulo, String data) {
+		this.filmes.add(new Filme(titulo, data));
+	}
 	
 	public void removeFilme(Filme filme) {
 		this.filmes.remove(filme);
@@ -49,6 +53,10 @@ public class Sistema {
 	public void addFuncionario(Funcionario funcionario) {
 		this.funcionarios.add(funcionario);
 	}
+
+	public void criarFuncionario(String nome) {
+		this.funcionarios.add(new Funcionario(nome));
+	}
 	
 	public void removeFuncionario(Funcionario funcionario) {
 		this.funcionarios.remove(funcionario);
@@ -60,7 +68,7 @@ public class Sistema {
 	 * @param funcao
 	 */
 	public void cadastrarEnvolvido(Filme filme, Profissao funcao) {
-		
+		filme.adicionarFuncionario(funcao);
 	}
 	
 	/***

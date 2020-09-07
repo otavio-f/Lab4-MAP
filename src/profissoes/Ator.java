@@ -15,7 +15,7 @@ public class Ator extends Profissao{
 	
 	@Override
 	public String toString() {
-		return String.format("Ator: %s", this.getFuncionario());
+		return String.format("Ator: %s\n", this.getFuncionario());
 	}
 
 }
