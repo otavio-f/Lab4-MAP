@@ -27,20 +27,14 @@ public class Sistema {
 		return filmes;
 	}
 
-	public void addFilme(Filme filme) {
-		this.filmes.add(filme);
-	}
-
 	public void criarFilme(String titulo, String data) {
 		this.filmes.add(new Filme(titulo, data));
 	}
 	
-
-	
-	public void removeFilme(Filme filme) {
-		this.filmes.remove(filme);
+	public void criarFuncionario(String nome) {
+		this.funcionarios.add(new Funcionario(nome));
 	}
-
+	
 	public Funcionario getFuncionario(String nome) {
 		for(Funcionario f:this.funcionarios)
 			if(f.getNome().equals(nome))
@@ -50,18 +44,6 @@ public class Sistema {
 	
 	public List<Funcionario> getFuncionarios() {
 		return funcionarios;
-	}
-	
-	public void addFuncionario(Funcionario funcionario) {
-		this.funcionarios.add(funcionario);
-	}
-
-	public void criarFuncionario(String nome) {
-		this.funcionarios.add(new Funcionario(nome));
-	}
-	
-	public void removeFuncionario(Funcionario funcionario) {
-		this.funcionarios.remove(funcionario);
 	}
 	
 	/***
@@ -88,6 +70,6 @@ public class Sistema {
 	 * @return
 	 */
 	public String detalhes(Filme filme) {
-		return null;
+		return filme.detalhes();
 	}
 }
