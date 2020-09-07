@@ -50,12 +50,29 @@ public class SistemaTeste {
 	public void detalhesTest() {
 		sys.criarFuncionario("Jose");
 		sys.criarFilme("Qualquer titulo serve", "01/1991");
+		sys.getFilme("Qualquer titulo serve").addMusica("Chão de Giz", "Zé Ramalho");
+		
 		sys.cadastrarEnvolvido(sys.getFilme("Qualquer titulo serve"), new Ator(sys.getFuncionario("Jose")));
 		
-		String esperado = "Titulo: Qualquer titulo serve\nData de Lançamento: 01/1991\n";
-		esperado += "Ator: Jose\n";
-		esperado += "\n";
+		String esperado = "\nTitulo: Qualquer titulo serve\nData de Lançamento: 01/1991\n";
+		esperado += "\nMúsicas:\n";
+		esperado += "titulo: Chão de Giz - cantor: Zé Ramalho\n";
+		esperado += "\nAtor: Jose\n";
 		assertEquals(esperado, sys.detalhes(sys.getFilme("Qualquer titulo serve")));
+	}
+	
+	@Test
+	public void acaoTest() {
+		sys.criarFuncionario("Jose");
+		sys.criarFilme("Qualquer titulo serve", "01/1991");
+		sys.cadastrarEnvolvido(sys.getFilme("Qualquer titulo serve"), new Ator(sys.getFuncionario("Jose")));
+		
+		String esperado = "Atua";
+		
+		assertEquals(
+				esperado,
+				sys.getFilme("Qualquer titulo serve").acaoFuncionario(sys.getFuncionario("Jose")));
+		
 	}
 
 }

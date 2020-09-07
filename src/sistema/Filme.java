@@ -63,7 +63,7 @@ public class Filme {
 	 * @param cantor
 	 */
 	public void addMusica(String titulo, String cantor) {
-		this.trilhaSonora.add(new Musica (titulo, cantor));
+		this.trilhaSonora.add(new Musica (cantor, titulo));
 	}
 	
 	/***
