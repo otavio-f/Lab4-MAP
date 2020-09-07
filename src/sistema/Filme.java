@@ -71,4 +71,8 @@ public class Filme {
 		return null;
 	}
 	
+	public String toString() {
+		return String.format("Filme: %s", titulo);
+	}
+	
 }

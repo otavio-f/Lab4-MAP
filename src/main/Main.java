@@ -13,14 +13,14 @@ public class Main {
 		Sistema controle = new Sistema();
 		
 		controle.criarFuncionario("Rafael");
-		controle.criarFuncionario("Otávio");
+		controle.criarFuncionario("Otavio");
 		controle.criarFuncionario("Maria");
-		controle.criarFuncionario("José");
+		controle.criarFuncionario("Jose");
 		
 		Funcionario rafael = controle.getFuncionario("Rafael");
 		Funcionario otavio = controle.getFuncionario("Otavio");
 		Funcionario maria = controle.getFuncionario("Maria");
-		Funcionario jose = controle.getFuncionario("José");
+		Funcionario jose = controle.getFuncionario("Jose");
 		
 		controle.criarFilme("Titanico", "04/2000");
 		controle.criarFilme("Jura Park", "03/2020");
@@ -51,8 +51,10 @@ public class Main {
 		controle.cadastrarEnvolvido(quando, new Ator(maria));
 
 		System.out.println("b) Informar a filmografia indicando sua função específica:");
+		System.out.println(controle.informarFilmografia(jose));
 		
 		System.out.println("c) Informar todas as características de um dado filme (nome, diretor, roteirista, elenco, trilha sonora, ano, etc.)");
+		System.out.println(titanico.detalhes());
 	}
 
 }
