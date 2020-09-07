@@ -58,5 +58,45 @@ public class Filme {
 		return null;
 	}
 
+	public List<Ator> getElenco() {
+		return elenco;
+	}
+
+	public void setElenco(List<Ator> elenco) {
+		this.elenco = elenco;
+	}
+
+	public List<Musica> getTrilhaSonora() {
+		return trilhaSonora;
+	}
+
+	public void setTrilhaSonora(List<Musica> trilhaSonora) {
+		this.trilhaSonora = trilhaSonora;
+	}
+
+	public Funcionario getDiretor() {
+		return diretor;
+	}
+
+	public void setDiretor(Funcionario diretor) {
+		this.diretor = diretor;
+	}
+
+	public Funcionario getRoteirista() {
+		return roteirista;
+	}
+
+	public void setRoteirista(Funcionario roteirista) {
+		this.roteirista = roteirista;
+	}
+
+	public Funcionario getCinegrafista() {
+		return cinegrafista;
+	}
+
+	public void setCinegrafista(Funcionario cinegrafista) {
+		this.cinegrafista = cinegrafista;
+	}
+
 	
 }
