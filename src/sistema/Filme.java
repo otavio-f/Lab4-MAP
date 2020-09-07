@@ -44,7 +44,15 @@ public class Filme {
 	}
 	
 	public String detalhes() {
-		return null;
+		String output = String.format(
+				"Titulo: %s\nData de Lançamento: %s\n",
+				this.titulo,
+				this.ano.format(DateTimeFormatter.ofPattern("MM/yyyy"))
+				);
+		for(Profissao p: this.funcionarios)
+			output += String.format("%s\n", p);
+		
+		return output;
 	}
 	
 	public String acaoFuncionario(Funcionario func) {
