@@ -28,7 +28,7 @@ public class Main {
 		
 		Filme titanico = controle.getFilme("Titanico");
 		Filme juraPark = controle.getFilme("Jura Park");
-		Filme quando = controle.getFilme("Jura Park");
+		Filme quando = controle.getFilme("Quando");
 		
 		System.out.println("a) Cadastrar todos os envolvidos em um filme informando sua(s) funcão(ões):");
 		controle.cadastrarEnvolvido(titanico, new Diretor(rafael));
