@@ -12,5 +12,10 @@ public class Diretor extends Profissao {
 	public String acao() {
 		return "Dirige o filme";
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("Diretor: %s\n", this.getFuncionario());
+	}
 
 }

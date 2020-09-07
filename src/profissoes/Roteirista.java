@@ -12,5 +12,10 @@ public class Roteirista extends Profissao {
 	public String acao() {
 		return "Cria roteiros";
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("Roteirista: %s\n", this.getFuncionario());
+	}
 
 }

@@ -38,6 +38,10 @@ public class Filme {
 	public void adicionarFuncionario(Profissao funcionario) {
 		funcionarios.add(funcionario);
 	}
+
+	public void addMusica(String titulo, String cantor) {
+		this.trilhaSonora.add(new Musica (titulo, cantor));
+	}
 	
 	public String detalhes() {
 		return null;

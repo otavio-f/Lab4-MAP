@@ -13,4 +13,8 @@ public class Cinegrafista extends Profissao {
 		return "Manuseia a câmera";
 	}
 
+	@Override
+	public String toString() {
+		return String.format("Cinegrafista: %s\n", this.getFuncionario());
+	}
 }
