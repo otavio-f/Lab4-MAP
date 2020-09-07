@@ -30,6 +30,21 @@ public class Main {
 		Filme juraPark = controle.getFilme("Jura Park");
 		Filme quando = controle.getFilme("Quando");
 		
+		titanico.addMusica("My heart will go on", "Celine Dion");
+		titanico.addMusica("Let it go", "Demi Lovato");
+		titanico.addMusica("Wonderwall", "Oasis");
+		titanico.addMusica("Take on me", "a-ha");
+		
+		juraPark.addMusica("La Belle de Jour", "Alceu Valença");
+		juraPark.addMusica("De volta pro aconchego", "Elba Rabalho");
+		juraPark.addMusica("A natureza das coisas", "Flávio José");
+		juraPark.addMusica("Chão de giz", "Zé Ramalho");
+		
+		quando.addMusica("Hoje eu sei", "Vanessa da Mata");
+		quando.addMusica("Não me arrependo", "Caetano Veloso");
+		quando.addMusica("Pra ser sincero", "Engenheiros do Hawaii");
+		quando.addMusica("Vento ventania", "Biquini Cavadão");
+		
 		System.out.println("a) Cadastrar todos os envolvidos em um filme informando sua(s) funcão(ões):");
 		controle.cadastrarEnvolvido(titanico, new Diretor(rafael));
 		controle.cadastrarEnvolvido(titanico, new Ator(maria));
@@ -47,7 +62,7 @@ public class Main {
 		controle.cadastrarEnvolvido(quando, new Diretor(maria));
 		controle.cadastrarEnvolvido(quando, new Ator(jose));
 		controle.cadastrarEnvolvido(quando, new Ator(rafael));
-		controle.cadastrarEnvolvido(quando, new Ator(jose));
+		controle.cadastrarEnvolvido(quando, new Ator(otavio));
 		controle.cadastrarEnvolvido(quando, new Ator(maria));
 
 		System.out.println("b) Informar a filmografia indicando sua função específica:");

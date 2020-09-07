@@ -45,12 +45,16 @@ public class Filme {
 	
 	public String detalhes() {
 		String output = String.format(
-				"Titulo: %s\nData de Lançamento: %s\n",
+				"\nTitulo: %s\nData de Lançamento: %s\n",
 				this.titulo,
 				this.ano.format(DateTimeFormatter.ofPattern("MM/yyyy"))
 				);
+		output += "\nMúsicas:\n";
+		for(Musica m: this.trilhaSonora)
+			output += String.format("%s", m);
+		output += "\n";
 		for(Profissao p: this.funcionarios)
-			output += String.format("%s\n", p);
+			output += String.format("%s", p);
 		
 		return output;
 	}
@@ -70,7 +74,29 @@ public class Filme {
 		
 		return null;
 	}
-	
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Filme other = (Filme) obj;
+		if (ano == null) {
+			if (other.ano != null)
+				return false;
+		} else if (!ano.equals(other.ano))
+			return false;
+		if (titulo == null) {
+			if (other.titulo != null)
+				return false;
+		} else if (!titulo.equals(other.titulo))
+			return false;
+		return true;
+	}
+
 	public String toString() {
 		return String.format("Filme: %s", titulo);
 	}

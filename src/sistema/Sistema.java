@@ -65,11 +65,11 @@ public class Sistema {
 		for(Filme f:this.filmes) {
 			String acaoFuncionario = f.acaoFuncionario(funcionario);
 			if(acaoFuncionario != null) {
-				filmografia += String.format("%s %s.\n", f.getTitulo(), acaoFuncionario);
+				filmografia += String.format("\n%s %s.\n", f.getTitulo(), acaoFuncionario);
 			}else {
 				filmografia += String.format("Não houve participação de %s\n", funcionario);
 			}
-			filmografia += String.format("\n--------------------------------------\n\n");
+			filmografia += String.format("\n");
 		}		
 		return filmografia;
 	}
