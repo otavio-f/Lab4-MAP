@@ -19,4 +19,13 @@ public class Filme {
 		this.ano = ano;
 	}
 
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	
 }

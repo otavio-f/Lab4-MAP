@@ -1,7 +1,11 @@
 package main;
 
+import sistema.Sistema;
+
 public class Main {
 	public static void main(String[] args) {
+		Sistema controle = new Sistema();
+		
 		System.out.println("a) Cadastrar todos os envolvidos em um filme informando sua(s) funcão(ões):");
 		
 		System.out.println("b) Informar a filmografia indicando sua função específica:");
