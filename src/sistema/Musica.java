@@ -7,7 +7,7 @@ public class Musica {
 	public Musica (String cantor, String titulo) {
 		this.cantor = cantor;
 		this.titulo = titulo;
-	}//lkj
+	}//lkjdf
 	public String toString () {
 		return String.format("titulo: %s - cantor: %s\n", this.titulo, this.cantor);
 	}
