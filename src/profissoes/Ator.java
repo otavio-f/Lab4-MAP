@@ -12,5 +12,10 @@ public class Ator extends Profissao{
 	public String acao() {
 		return "Atua";
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("Ator: %s", this.getFuncionario());
+	}
 
 }
