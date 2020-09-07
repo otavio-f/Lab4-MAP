@@ -2,6 +2,12 @@ package profissoes;
 
 import sistema.Funcionario;
 
+/***
+ * Classe abstrata que representa uma função
+ * @author Otavio
+ * @author Rafael
+ *
+ */
 public class Cinegrafista extends Profissao {
 
 	public Cinegrafista(Funcionario func) {

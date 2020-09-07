@@ -1,5 +1,11 @@
 package sistema;
 
+/***
+ * Representa um funcionario
+ * @author Otavio
+ * @author Rafael
+ *
+ */
 public class Funcionario {
 	
 	private String nome;
@@ -8,10 +14,18 @@ public class Funcionario {
 		this.nome = nome;
 	}
 	
+	/***
+	 * Retorna o nome desse funcionario
+	 * @return
+	 */
 	public String getNome() {
 		return nome;
 	}
 
+	/***
+	 * Altera o nome desse funcionario
+	 * @param nome
+	 */
 	public void setNome(String nome) {
 		this.nome = nome;
 	}

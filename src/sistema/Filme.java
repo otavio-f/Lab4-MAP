@@ -7,6 +7,12 @@ import java.util.List;
 
 import profissoes.*;
 
+/***
+ * Classe que contém os dados de um filme
+ * @author Otavio
+ * @author Rafael
+ *
+ */
 public class Filme {
 	private String titulo;
 	private YearMonth ano;
@@ -27,22 +33,43 @@ public class Filme {
 		this.trilhaSonora = new ArrayList<Musica>();
 	}
 
+	/***
+	 * Retorna o título do filme
+	 * @return
+	 */
 	public String getTitulo() {
 		return titulo;
 	}
 
+	/***
+	 * Altera o título do filme
+	 * @param titulo
+	 */
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
 	
+	/***
+	 * Adiciona um funcionario ligado a uma profissão
+	 * @param funcionario
+	 */
 	public void adicionarFuncionario(Profissao funcionario) {
 		funcionarios.add(funcionario);
 	}
 
+	/***
+	 * Cria uma música e armazena
+	 * @param titulo
+	 * @param cantor
+	 */
 	public void addMusica(String titulo, String cantor) {
 		this.trilhaSonora.add(new Musica (titulo, cantor));
 	}
 	
+	/***
+	 * Lista os detalhes desse filme
+	 * @return
+	 */
 	public String detalhes() {
 		String output = String.format(
 				"\nTitulo: %s\nData de Lançamento: %s\n",
@@ -59,20 +86,17 @@ public class Filme {
 		return output;
 	}
 	
+	/***
+	 * Retorna a função de um funcionario nesse filme
+	 * @param func
+	 * @return
+	 */
 	public String acaoFuncionario(Funcionario func) {
 		String acoes = "";
 		for(Profissao p: funcionarios)
 			if(p.getFuncionario().equals(func))
 				acoes += p.acao();
 		return acoes;
-	}
-	
-	public Funcionario isDiretor(Funcionario func) {
-		for(Profissao p: funcionarios)
-			if(p.acao().equals("Dirigir o filme"))
-				return p.getFuncionario();
-		
-		return null;
 	}
 
 	@Override

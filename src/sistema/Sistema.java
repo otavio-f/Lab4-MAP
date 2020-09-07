@@ -5,6 +5,12 @@ import java.util.List;
 
 import profissoes.Profissao;
 
+/***
+ * Classe do controle do sistema
+ * @author Otavio
+ * @author Rafael
+ *
+ */
 public class Sistema {
 	
 	private List<Filme> filmes;
@@ -23,18 +29,36 @@ public class Sistema {
 		return null;
 	}
 	
+	/***
+	 * Retorna a lista de filmes
+	 * @return
+	 */
 	public List<Filme> getFilmes() {
 		return filmes;
 	}
 
+	/***
+	 * Cria um filme e armazena
+	 * @param titulo
+	 * @param data
+	 */
 	public void criarFilme(String titulo, String data) {
 		this.filmes.add(new Filme(titulo, data));
 	}
 	
+	/***
+	 * Cria um funcionario e armazena
+	 * @param nome
+	 */
 	public void criarFuncionario(String nome) {
 		this.funcionarios.add(new Funcionario(nome));
 	}
 	
+	/***
+	 * Busca por um funcionario
+	 * @param nome
+	 * @return
+	 */
 	public Funcionario getFuncionario(String nome) {
 		for(Funcionario f:this.funcionarios)
 			if(f.getNome().equals(nome))
@@ -42,6 +66,10 @@ public class Sistema {
 		return null;
 	}
 	
+	/***
+	 * Retorna a lista de funcionarios
+	 * @return
+	 */
 	public List<Funcionario> getFuncionarios() {
 		return funcionarios;
 	}

@@ -1,5 +1,11 @@
 package sistema;
 
+/***
+ * Classe que representa uma música
+ * @author Rafael
+ * @author Otavio
+ *
+ */
 public class Musica {
 	private String cantor;
 	private String titulo;
