@@ -66,7 +66,7 @@ public class Main {
 		controle.cadastrarEnvolvido(quando, new Ator(maria));
 
 		System.out.println("b) Informar a filmografia indicando sua função específica:");
-		System.out.println(controle.informarFilmografia(jose));
+		System.out.println(controle.informarFilmografia(otavio));
 		
 		System.out.println("c) Informar todas as características de um dado filme (nome, diretor, roteirista, elenco, trilha sonora, ano, etc.)");
 		System.out.println(titanico.detalhes());

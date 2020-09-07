@@ -95,8 +95,10 @@ public class Filme {
 		String acoes = "";
 		for(Profissao p: funcionarios)
 			if(p.getFuncionario().equals(func))
-				acoes += p.acao();
-		return acoes;
+				acoes += p.acao()+",";
+		if(acoes.isEmpty())
+			return null;
+		return acoes.subSequence(0, acoes.length()-1).toString();
 	}
 
 	@Override
